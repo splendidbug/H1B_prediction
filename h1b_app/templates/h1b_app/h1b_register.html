@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'h1b_app/homepage_files/home_css.css' %}">
+
+<div class="colorstrip">
+	<div>
+		<img src="homepage_files/embassyLogo.png" class="logo_img">
+
+	</div>
+	<div class="name">
+		<p>U.S. Embassy & Consulates<br>India</p>
+	</div>
+</div>
+
+<div class="colorstrip2">
+	
+		<p class="strip2para"><b>Air Quality Data:</b> U.S. Embassy and Consulates’ air quality monitors measure PM 2.5 data.</p>
+	
+</div>
+
+<div class="redstrip"/>
+
+  <div class="topNav">
+  <a href="visa_page.html"  class="active">Visas</a>
+  <a href="citizen_services_page.html">U.S. Citizen Services</a>
+  <a href="#######">View Status</a>
+  <a href="heathcare.html">Our Relationship</a>
+  <a href="scienceAndTechnology.html">Business</a>
+  <a href="heathcare.html">Education & Culture</a>
+  <a href="heathcare.html">Embassy & Consulates</a>
+
+  </div>
+
+
+<div class="visa_page_buttons">
+	<p>Your registration ID is:</p>
+	<div class="reg_id">#######</div>
+        <p>Please select a security question:</p>
+			<select name="security" id="security">
+  				<option value="na">--Select one--</option>
+    				<option value="mother_name">What is the given name of your mother?</option>
+    				<option value="father_name">What is the given name of your father?</option>
+    				<option value="child_name">What name did your family used to call you when you were  child?</option>
+    				<option value="city">In what city did you meet your spouse/significant other?</option>
+    				<option value="8city">In which city did you live when you were 8 years old?</option>
+    				<option value="pet">What was the name of your first pet?</option>
+				<option value="teacher_name">What is the last name of your favourite teacher?</option>
+				<option value="job">In which city did you have your first job?</option>
+				<option value="bf">What was the name of your first boyfriend/girl friend?</option>
+				<option value="other">Other</option>
+  				</select>
+	<br><br><input type="text" id="sec_question" name="sec_question"><br><br>
+	<button class="fill_the_form" onclick="window.location.href='index.html'">Fill the form</button>
+
+
+</div>
+
+</html>

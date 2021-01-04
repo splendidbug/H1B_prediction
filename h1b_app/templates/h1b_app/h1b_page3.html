@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v4 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+{% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'h1b_app/css/opensans-font.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'h1b_app/fonts/line-awesome/css/line-awesome.min.css' %}">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'h1b_app/css/style.css' %}"/>
+</head>
+<body class="form-v4">
+	<div class="page-content">
+		<div class="form-v4-content">
+			<div class="form-left">
+				<h2>INFORMATION</h2>
+				<p class="text-2"><br><br><br><br><br>A fulltime job requires 30 or more hours of work in a week</p>
+				<p class="text-2"><br>Enter the listed salary without the extra bonuses/overtime</p>
+				
+			</div>
+			<form class="form-detail" action="" method="post" id="myform">
+			{% csrf_token %}
+				<h2>Employment Details</h2>
+
+			
+				<div class="form-row">
+					<label for="job_title">Job title:</label>
+					<input type="text" name="job_title" id="job_title" class="input-text">
+				</div>
+				<label for="fulltime">Is this a fulltime job?</label>
+				<div class="form-group">
+						<label for="yes" class="sex">Yes</label>
+						
+						<div class="form-row form-row-1">	
+							<input type="radio" id="yes" name="fulltime" value="yes">
+						</div>	
+						
+						<label for="no">No</label>
+						
+						<div class="form-row form-row-1">
+							<input type="radio" id="no" name="fulltime" value="no">
+						</div>
+					
+				</div>
+				<br>
+				<div class="form-row">
+					<label for="hours_per_week">Hours per week:</label>
+					<input type="hours_per_week" name="hours_per_week" id="hours_per_week" class="input-text">
+				</div>
+
+				<div class="form-row">
+					<label for="occupation">Occupation:</label>
+					<input type="occupation" name="occupation" id="occupation" class="input-text">
+				</div>
+
+
+				<div class="form-row">
+					<label for="salary">Salary</label>
+					<input type="number" name="salary" id="salary" class="input-text">
+				</div>
+
+				<div class="form-row">
+					<label for="emp_date">Employement date:</label>
+					<input type="text" name="emp_date" id="emp_date" class="input-text" required pattern="\d{1,2}/\d{1,2}/\d{4}">
+				</div>
+
+				<div class="form-row">
+					<label for="income">Annual income:</label>
+					<input type="income" name="income" id="income" class="input-text">
+				</div>
+				
+  				
+				<br><br>
+				
+
+				<div class="form-row-last">
+					<input type="submit" name="register" class="register" value="Back" onclick="back()">
+					<input type="submit" name="save" class="register" value="Save">
+					<input type="submit" name="register" class="register" value="Submit" onclick="next()">
+
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script>
+
+form=document.getElementById("myform");
+
+function back() {
+    form.action="h1b_page2/";
+    form.submit();
+}
+
+function next() {
+    form.action="/h1b_app/congrats/";
+    form.submit();
+}
+	</script>
+</body>
+</html>

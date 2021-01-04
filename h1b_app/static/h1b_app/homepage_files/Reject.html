@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form-v4 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="css/opensans-font.css">
+	<link rel="stylesheet" type="text/css" href="fonts/line-awesome/css/line-awesome.min.css">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="form-v4"  onload="createCaptcha()">
+	<div class="page-content">
+		<div class="form-v4-content">
+			<div class="form-left">
+				<h2>Rejection of Passport Application</h2>
+				<p class="text-2"><br>In order to get a passport, you need to apply for it and surprisingly enough, quite a few applications for an Indian Passport are rejected. This is not because the passport comes with a special eligibility criteria, it's mainly a result of some common errors and special situations. Here are some of the most common reasons why your passport application could be rejected.
+				</p>
+				<p style="color:white;font-size:18px;"><b>What to do if the Application is Rejected ?</b></p>
+				<p class="text-2">In the event that your passport application is rejected the first thing to do would be to check the reason for rejection. If it was rejected due to failure of police verification or improper documentation, etc. you can correct the mistake and apply again after 3 days. If you are at odds with the reason for rejection, or if the reasons are not clear, you can write to the RPO or register a grievance. The passport office will look into it and the matter will be resolved at the earliest possible.<br>If you were to treat these mistakes as a checklist, then you can rest assured that your application stands a higher chance of getting accepted. Make sure you are not at odds with any of the points mentioned here and ensure that you are very careful with the application and the documents that are submitted.
+			</p>
+			<p style="color:white;font-size:18px;"><b>Rejection of Passport Renewal</b></p>
+			<p class="text-2">There are a variety of reasons that would necessitate the application for <a href="Re_issue.html" style="color:yellow">reissue of a passport</a>. These reasons could be anything like running out of pages, reaching the expiry date of the current passport or even the very unfortunate situation of losing the current passport. In this case, you are going to have to apply for a reissue of passport which can also be subject to the conditions mentioned above.
+			</p></diV>
+										<form class="form-detail" action="#" method="post" id="myform" onsubmit="validateCaptcha()">
+											<h2>Reasons for Rejection of Passport Application</h2>
+											Some of the reasons for the rejection of an application for a passport can be so elementary that they really shouldn't be happening. If you want to avoid making such basic mistakes then here is what you need to watch out for.
+											<label for="pp" style="color:blue;font-size:18px;">Mistakes on the application form : </label>
+											Before you start <a href="#">filling out the application form</a>, make sure you read through the instructions very carefully. If you enter the wrong information in the wrong place, it could lead to the application being deemed invalid.
+											<br><label for="pno" style="color:black;font-size:18px;">Incorrect information : </label>
+										    If the information you provide cannot be verified, is at variance with the supporting documents or is found to be incorrect, it could lead to the rejection of your application.
+											<br><label for="pno" style="color:black;font-size:18px;">Incorrect documents : </label>
+											When you apply for a passport, you are also required to submit certain documents. These documents relate to proving your identity, your date of birth and your status for the ECR (Emigration Check Required). There is a specific list of documents that has been published by the Ministry of External Affairs and if you deviate from that list then your application is likely to be rejected.
+											<br><label for="pno" style="color:black;font-size:18px;">Unclear documents : </label>
+											When you apply for a passport, you are required to submit copies of supporting documents. If the copies, which are submitted by you, are not legible in a way that obscures the information, or makes it difficult discern it, the chances of a rejection of the application goes up.
+											<br><label for="pno" style="color:black;font-size:18px;">Fee not paid : </label>
+											When you apply for a passport, you are expected to pay a certain fee for said passport. If you fail to pay the fee in the given time, your application for a passport could be reject.
+											<br><label for="pno" style="color:black;font-size:18px;">Failure to complete police verification : </label> 
+											While you can get the passport even before the police verification is over, the process of the application is not complete till this verification is done. Many a time's applications get rejected as a result of inconclusive police verification. This can happen if you fail to provide your current address correctly. It can also happen if you are no longer available at the address you have provided. If you apply for a passport and shift before the verification, without informing the police or the passport department, you might end up with a rejected application.
+											<br><label for="pno" style="color:black;font-size:18px;">Criminal history : </label>
+											If you have a criminal history or cases pending, then your application could be rejected. This could be done to ensure you are available in the country for the duration of the trial. In case you have been involved in a criminal investigation but the charges against you were dropped, then you might need to submit the certificate affirming the same. This will also include cases where there are warrants issued in your name.
+											<br><label for="pno" style="color:black;font-size:18px;">Dues not paid : </label> 
+											Let's say you have taken some big loans or have borrowed a lot on credit cards and have not been very regular with repayments, your application could get rejected. Make sure you're not buried in debt when you apply for a passport.
+											
+											
+											
+										</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+	<script>
+		// just for the demos, avoids form submit
+		jQuery.validator.setDefaults({
+		  	debug: true,
+		  	success:  function(label){
+        		label.attr('id', 'valid');
+   		 	},
+		});
+		$( "#myform" ).validate({
+		  	rules: {
+			    password: "required",
+		    	comfirm_password: {
+		      		equalTo: "#password"
+		    	}
+		  	},
+		  	messages: {
+		  		first_name: {
+		  			required: "Please enter a firstname"
+		  		},
+		  		last_name: {
+		  			required: "Please enter a lastname"
+		  		},
+		  		dob: {
+		  			required: "Please enter your date of birth"
+		  		},
+		  		
+		  	}
+		});
+		
+
+	</script>
+</body>
+</html>

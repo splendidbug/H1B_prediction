@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'h1b_app/homepage_files/home_css.css' %}">
+<div class="colorstrip">
+	<div>
+		<img src="homepage_files/embassyLogo.png" class="logo_img">
+
+	</div>
+	<div class="name">
+		<p>U.S. Embassy & Consulates<br>India</p>
+	</div>
+</div>
+
+<div class="colorstrip2">
+	
+		<p class="strip2para"><b>Air Quality Data:</b> U.S. Embassy and Consulates’ air quality monitors measure PM 2.5 data.</p>
+	
+</div>
+
+<div class="redstrip"/>
+
+  <div class="topNav">
+  <a href="visa_page.html" class="active">Visas</a>
+  <a href="citizen_services_page.html">U.S. Citizen Services</a>
+  <a href="#######">View Status</a>
+  <a href="heathcare.html">Our Relationship</a>
+  <a href="scienceAndTechnology.html">Business</a>
+  <a href="heathcare.html">Education & Culture</a>
+  <a href="heathcare.html">Embassy & Consulates</a>
+
+  </div>
+
+
+
+<form class="form-detail" action="/h1b_app/result/" method="get" id="myform">
+	{% csrf_token %}
+	<p class="chance">Your expected chance of approval is:</p>
+	{{data1}}
+
+</form>
+
+</html>
