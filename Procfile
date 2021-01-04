@@ -1,1 +1,1 @@
-web : gunicorn h1b_django.wsgi --log-file - 
+web: gunicorn h1b_django.wsgi --log-file - 
