@@ -7,4 +7,5 @@ To predict your chances of H1B visa: Got to visa section -> H1B visa -> Fill out
 Project description:
 
 •	A full end to end application for MySQL based embassy management system to predict the probability of H1B visa approval. 
+
 •	Visa status is predicted using Random Forest classifier, Django is used as a web framework and deployed on Pythonanywhere.
